@@ -1,0 +1,121 @@
+/* RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/*FIN RESET CSS*/
+/*CALIBRAGE PX/REM*/
+html {
+    font-size: 62.5%;
+}
+
+/*FIN CALIBRAGE PX/REM*/
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    #container header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        header label {
+            font-size: large;
+        }
+
+    #container #clock {
+        width: 25rem;
+        display: flex;
+        position: relative;
+        top: 2.5rem;
+    }
+
+        #container #clock #clock-background {
+            border-radius: 100%;
+            border:1px solid black;
+            background-image: url("/images/clock.png");
+            background-color: white;
+            background-position: center;
+            background-size: cover;
+            width: 25rem;
+            height: 25rem;
+        }
+
+            #clock-background div {
+                position: absolute;
+                left: 50%;
+                transform-origin: bottom;
+            }
+
+            #clock-needle-s {
+                height: 11.25rem;
+                background-color: red;
+                width: 1px;
+                top: 1.25rem;
+            }
+
+            #clock-needle-m {
+                height: 10.75rem;
+                background-color: blue;
+                width: 1px;
+                top: 1.75rem;
+            }
+
+            #clock-needle-h {
+                height: 10rem;
+                background-color: #000064;
+                width: 3px;
+                top: 2.5rem;
+            }
+
+
+
+@media screen and (min-width: 600px) {
+
+
+    #container #clock {
+        width: 50rem;
+    }
+
+    #container #clock #clock-background {
+        width: 50rem;
+        height: 50rem;
+    }
+
+    #clock-needle-s {
+        height: 22.5rem;
+        top: 2.5rem;
+    }
+
+    #clock-needle-m {
+        height: 21.5rem;
+        top: 3.5rem;
+    }
+
+    #clock-needle-h {
+        height: 20rem;
+        background-color: black;
+        width: 3px;
+        top: 5rem;
+    }
+}
